@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+
+<meta charset="UTF-8">
+
+
+<title>
+一刻表达
+</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+<nav class="navbar">
+
+
+<h2>
+一刻表达
+</h2>
+
+
+
+<div class="nav-links">
+
+
+<a href="index.html">
+🏠 首页
+</a>
+
+
+<a href="record.html">
+📝 今日记录
+</a>
+
+
+<a href="growth.html">
+🌱 表达成长
+</a>
+
+
+<a href="podcast.html">
+🎧 播客学习
+</a>
+
+
+<a href="knowledge.html">
+🧠 认知库
+</a>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+<div class="container">
+
+
+
+
+
+<h1>
+一刻表达
+</h1>
+
+
+
+
+<p class="slogan">
+
+每天一分钟，让表达越来越自然
+
+</p>
+
+
+
+
+
+
+
+<div class="stats-container">
+
+
+<div class="stat-card">
+
+
+<h3>
+🔥 连续训练
+</h3>
+
+
+<p id="streak">
+
+0天
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="stat-card">
+
+
+<h3>
+📅 累计训练
+</h3>
+
+
+<p id="total-days">
+
+0天
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+<div class="welcome-card">
+
+
+<p id="daily-inspire">
+
+</p>
+
+
+
+<h2>
+👋 欢迎回来
+</h2>
+
+
+
+<p>
+
+今天也花一分钟，
+让自己的表达更进一步。
+
+</p>
+
+
+
+<p id="welcome-message">
+
+正在生成今日状态...
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+🎯 今日表达挑战
+
+</h2>
+
+
+
+
+
+<div class="topic-box">
+
+
+<p class="topic-title">
+
+今日话题
+
+</p>
+
+
+
+<p id="topic" class="topic-text">
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<h3 id="timer">
+
+01:00
+
+</h3>
+
+
+
+
+
+
+<button onclick="startPractice();startVoice()" class="start-btn">
+
+
+🎤 开始一分钟表达
+
+
+</button>
+
+
+
+
+
+
+
+<p id="practice-status">
+
+今天还没有完成训练
+
+</p>
+
+
+<div class="voice-box">
+
+
+<h3>
+🎤 语音训练状态
+</h3>
+
+
+<p id="voice-status">
+
+等待开始...
+
+</p>
+
+
+<p id="word-count">
+
+已表达字数：0
+
+</p>
+
+
+
+</div>
+
+
+</div>
+
+<div class="voice-result">
+
+
+<h3>
+📊 今日表达分析
+</h3>
+
+
+<p id="voice-time">
+
+表达时间：0秒
+
+</p>
+
+
+<p id="voice-speed">
+
+平均语速：0字/分钟
+
+</p>
+
+
+<p id="voice-advice">
+
+训练完成后生成建议
+
+</p>
+
+
+</div>
+
+
+
+<div class="challenge-card">
+
+
+<h2>
+
+🎯 30天表达挑战
+
+</h2>
+
+
+
+<!-- =====================
+🎯 今日智能计划
+===================== -->
+
+
+<div class="card smart-card">
+
+
+<h2>
+🎯 今日智能计划
+</h2>
+
+
+
+<div id="today-task">
+
+正在生成今日任务...
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<!-- =====================
+🌱 我的成长数据
+===================== -->
+
+
+<div class="card smart-card">
+
+
+<h2>
+🌱 我的成长
+</h2>
+
+
+
+<p id="home-growth">
+
+正在加载成长数据...
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+<!-- =====================
+🧠💬 AI今日建议
+===================== -->
+
+
+<div class="card smart-card">
+
+
+<h2>
+🧠💬 AI今日建议
+</h2>
+
+
+
+<p id="ai-daily-advice">
+
+正在生成建议...
+
+</p>
+
+
+
+</div>
+
+
+
+<p id="challenge-text">
+
+已完成：0 / 30 天
+
+</p>
+
+
+
+
+<div class="progress-box">
+
+
+<div id="progress-bar">
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+<div class="card">
+
+
+<h2>
+
+🌱 今日目标
+
+</h2>
+
+
+<p>
+
+完成一次60秒表达训练，
+记录自己的想法，
+持续积累表达能力。
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- 🧠💬 一刻AI助手 -->
+
+
+<div class="ai-button" onclick="openAI()">
+
+🧠
+
+</div>
+
+
+
+
+<div class="ai-box" id="ai-box">
+
+
+
+<div class="ai-title">
+
+🌱 一刻AI助手
+
+</div>
+
+
+<p id="ai-memory">
+
+</p>
+
+
+
+<p id="ai-welcome">
+
+正在分析你的表达成长...
+
+</p>
+
+
+
+
+<div class="ai-content" id="ai-content">
+
+
+你好，我是一刻AI助手 🌱
+
+
+<br><br>
+
+
+我可以帮助你：
+
+<br><br>
+
+
+🎤 表达训练建议
+
+<br>
+
+🧠 分析表达问题
+
+<br>
+
+📝 制定练习计划
+
+<br>
+
+✨ 提升表达能力
+
+
+<br><br>
+
+
+试着问我：
+
+<br>
+
+“为什么我讲话紧张？”
+
+<br>
+
+“如何提高逻辑表达？”
+
+</div>
+
+
+
+
+
+<div class="ai-input">
+
+
+<input
+
+id="ai-input"
+
+placeholder="输入你的问题..."
+
+>
+
+
+<button onclick="askAI()">
+
+发送
+
+</button>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<script src="knowledge-data.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

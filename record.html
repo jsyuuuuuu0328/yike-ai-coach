@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>
+📝 今日记录 - 一刻表达
+</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar">
+
+
+<h2>
+一刻表达
+</h2>
+
+
+
+<div class="nav-links">
+
+
+<a href="index.html">
+🏠 首页
+</a>
+
+
+<a href="record.html">
+📝 今日记录
+</a>
+
+
+<a href="growth.html">
+🌱 表达成长
+</a>
+
+
+<a href="podcast.html">
+🎧 播客学习
+</a>
+
+
+<a href="knowledge.html">
+🧠 认知库
+</a>
+
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+<div class="page-container">
+
+
+
+<h1>
+📝 今日记录
+</h1>
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+🎤 今日一分钟表达
+</h2>
+
+
+
+<p>
+今天也花一分钟，让自己的表达更进一步。
+</p>
+
+
+
+<div class="topic-box">
+
+
+<p class="topic-title">
+
+🎯 今日表达挑战
+
+</p>
+
+
+<p id="topic" class="topic-text">
+
+</p>
+
+
+</div>
+
+
+
+
+
+<h3 id="timer">
+
+01:00
+
+</h3>
+
+
+
+
+<button 
+onclick="startPractice()"
+class="start-btn">
+
+🎤 开始一分钟表达
+
+</button>
+
+
+
+<p id="practice-status">
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+⭐ 今日表达评分
+</h2>
+
+
+
+
+<div class="record-card">
+
+
+<h2>
+⭐ 今日表达评分
+</h2>
+
+
+
+<p>
+今天给自己的表达打几分？
+</p>
+
+
+
+<div id="rating">
+
+
+<span onclick="rate(1)">⭐</span>
+
+<span onclick="rate(2)">⭐</span>
+
+<span onclick="rate(3)">⭐</span>
+
+<span onclick="rate(4)">⭐</span>
+
+<span onclick="rate(5)">⭐</span>
+
+
+</div>
+
+
+
+<p id="score">
+
+今天表达状态：未评分
+
+</p>
+
+
+
+</div>
+
+
+
+<p id="score">
+
+请选择今天的表达状态
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+📝 今天的表达感受
+</h2>
+
+
+
+<div class="record-card">
+
+
+<h2>
+📝 今日表达感受
+</h2>
+
+
+
+<textarea
+
+id="feeling"
+
+placeholder="记录今天表达时的想法、收获或者不足..."
+
+></textarea>
+
+
+
+
+<button onclick="analyzeExpression()">
+
+🧠 AI点评我的表达
+
+</button>
+
+
+
+<div id="ai-feedback">
+
+等待AI分析...
+
+</div>
+
+
+
+</div>
+
+placeholder="记录今天表达时的感受，例如：哪里卡顿、哪里进步、有什么想法..."
+
+></textarea>
+
+
+
+
+
+<button onclick="analyzeExpression()">
+
+🤖 AI表达点评
+
+</button>
+
+
+
+<div id="ai-feedback">
+
+等待你的表达记录...
+
+</div>
+
+
+
+
+
+<button onclick="saveRecord()">
+
+💾 保存今日记录
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+📚 我的表达历史
+</h2>
+
+
+
+<div class="record-card">
+
+
+<h2>
+📚 我的表达记录
+</h2>
+
+
+
+<div id="history">
+
+暂无记录
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
