@@ -2522,8 +2522,6 @@ input.value="";
 
 
 
-}
-
 
 /* =====================
 🎯 首页智能计划系统
@@ -3157,3 +3155,49 @@ ${memory.problem}
 
 
 updateAIMemory();
+
+
+function loadInspire(){
+
+
+let texts=[
+
+"表达不是展示自己，而是让别人理解自己。",
+
+"每天一分钟，坚持一年，你会遇见更好的自己。",
+
+"敢开口，就是表达成长的开始。",
+
+"好的表达来自持续输入和不断练习。",
+
+"不要追求完美表达，先成为持续表达的人。"
+
+];
+
+
+let box =
+document.getElementById(
+"daily-inspire"
+);
+
+
+
+if(box){
+
+
+let index =
+Math.floor(Math.random()*texts.length);
+
+
+box.innerHTML =
+"✨ "+texts[index];
+
+
+}
+
+
+
+}
+
+
+loadInspire();
