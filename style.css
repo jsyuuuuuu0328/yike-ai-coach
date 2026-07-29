@@ -2725,4 +2725,124 @@ z-index:999;
 
 
 
+/* =====================
+🧠 AI弹窗最终修复
+===================== */
 
+
+.ai-box{
+
+display:none;
+
+position:fixed;
+
+right:30px;
+
+bottom:120px;
+
+width:360px;
+
+height:auto;
+
+max-height:600px;
+
+background:white;
+
+padding:25px;
+
+border-radius:25px;
+
+box-shadow:
+0 15px 40px rgba(0,0,0,0.18);
+
+z-index:9999;
+
+overflow:visible;
+
+}
+
+
+
+/* AI内容区域 */
+
+.ai-content{
+
+height:250px;
+
+overflow-y:auto;
+
+background:#f7f7f5;
+
+border-radius:18px;
+
+padding:18px;
+
+line-height:1.8;
+
+}
+
+
+
+
+
+/* 输入区域固定显示 */
+
+.ai-input{
+
+display:flex;
+
+gap:10px;
+
+margin-top:15px;
+
+}
+
+
+
+.ai-input input{
+
+flex:1;
+
+height:42px;
+
+border-radius:25px;
+
+border:1px solid #ddd;
+
+padding:0 15px;
+
+font-size:15px;
+
+}
+
+
+
+.ai-input button{
+
+margin:0;
+
+padding:10px 20px;
+
+border-radius:25px;
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+.ai-box{
+
+right:5%;
+
+width:90%;
+
+bottom:110px;
+
+}
+
+
+}
